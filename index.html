@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Megan Lee">
+
+    <title>One World Children's Fund - Education Dashboard</title>
+
+    <!-- Library CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/owcf-edu.css" rel="stylesheet">
+
+    <!-- Style Related -->
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins/metisMenu/metisMenu.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/owcf.js"></script>
+
+    <!-- Visualization Related -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+    <!-- Charts JavaScript -->
+    <script src="js/main/children.js"></script>
+    <script src="js/main/dollars.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" style="color:white;font-size:2em">Education Dashboard</a>
+            </div>
+            <!-- /.navbar-header -->
+
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <img src="img/owcf-logo.jpg" width="250">
+                        </li>
+                        <li>
+                            <a class="active" href="index.html"><i class="fa fa-dashboard fa-fw"></i> Main Metrics</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Continent Metrics<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li><a href="global.html">Global Partners</a></li>
+                                <li><a href="asia.html">Asia</a></li>
+                                <li><a href="africa.html">Africa</a></li>
+                                <li><a href="latin-america.html">Latin America</a></li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+            <hr>
+            </div>
+
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-book fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="font-size:2em;">Global</div>
+                                    <div>Eduation Partners</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="global.html">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-university fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="font-size:2em;">Asia</div>
+                                    <div>Eduation Metrics</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="asia.html">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-tasks fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="font-size:2em;">Africa</div>
+                                    <div>Eduation Metrics</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="africa.html">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-graduation-cap fa-4x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div style="font-size:2em;">America</div>
+                                    <div>Eduation Metrics</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="latin-america.html">
+                            <div class="panel-footer">
+                                <span class="pull-left">View Details</span>
+                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- /. end of top links -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> 
+                            Dollars Raised by Champions for Education 
+                            <!-- Year Selection Button -->
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <!-- The first button -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-info dropdown-toggle " data-toggle="dropdown" aria-expanded="false">
+                                    <span id="year1button">2013</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul id="year1" class="dropdown-menu" role="menu">
+                                </ul>
+                            </div>
+                            <!-- The second button -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <span id="year2button">2014</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul id="year2" class="dropdown-menu" role="menu">
+                                </ul>
+                            </div>
+
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-12" id="dollars-chart" style="height:300px;">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> 
+                            Number of Children Served with Education
+                            <!-- The year selector -->
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                            
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <span id="thisyear">2014</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <ul id="yearselection" class="dropdown-menu" role="menu">
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-12" id="children-edu" style="height:400px;">
+                                </div>
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-8 -->
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+</body>
+</html>
