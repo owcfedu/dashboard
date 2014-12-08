@@ -4,9 +4,9 @@ function loadMap() {
         scope: 'world',
         setProjection: function(element) {
             var projection = d3.geo.equirectangular()
-                               .center([-10, 35])
+                               .center([30, 35])
                                .rotate([30, 0])
-                               .scale(220)
+                               .scale(170)
                                // .translate([element.offsetWidth, element.offsetHeight / 2]);
             var path = d3.geo.path()
                          .projection(projection);
@@ -63,7 +63,7 @@ function loadMap() {
     });
 
     // get the partner data for shown on the bubbles
-    var radiusNumber = 8;
+    var radiusNumber = 5;
     var fillColor = "darkgreen";  
     var yeildVal = 15000;
     d3.csv("data/global/global-partners.csv", function(error, data) {
